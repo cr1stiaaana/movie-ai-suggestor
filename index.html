@@ -1,0 +1,107 @@
+`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie AI Suggestor</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <header>
+        <h1>🎬 Movie AI Suggestor</h1>
+        <p>Get personalized movie recommendations powered by machine learning</p>
+    </header>
+
+    <main class="container">
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="import">Import Movies</button>
+            <button class="tab-btn" data-tab="add">Add Movie</button>
+            <button class="tab-btn" data-tab="recommendations">Recommendations</button>
+            <button class="tab-btn" data-tab="collection">My Collection</button>
+        </nav>
+
+        <!-- Import Tab -->
+        <section id="import-tab" class="tab-content active">
+            <div class="card">
+                <h2>📁 Import from CSV</h2>
+                <p>Upload your movie history from TV Time or Letterboxd</p>
+                
+                <div class="upload-area" id="uploadArea">
+                    <input type="file" id="csvFile" accept=".csv" hidden>
+                    <div class="upload-content">
+                        <span class="upload-icon">📤</span>
+                        <p>Drag and drop your CSV file here</p>
+                        <p class="upload-hint">or click to browse</p>
+                    </div>
+                </div>
+
+                <div id="importStatus" class="status-message"></div>
+                
+                <div class="info-box">
+                    <h3>Supported Formats:</h3>
+                    <ul>
+                        <li><strong>TV Time:</strong> Movie Name, Rating, Date, Year</li>
+                        <li><strong>Letterboxd:</strong> Name, Year, Rating, Watched Date</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add Movie Tab -->
+        <section id="add-tab" class="tab-content">
+            <div class="card">
+                <h2>✏️ Add Movie Manually</h2>
+                
+                <form id="searchForm" class="search-form">
+                    <div class="form-group">
+                        <input type="text" id="movieTitle" placeholder="Enter movie title" required>
+                        <input type="number" id="movieYear" placeholder="Year (optional)" min="1900" max="2025">
+                    </div>
+                    <button type="submit" class="btn-primary">Search TMDb</button>
+                </form>
+
+                <div id="searchResults" class="search-results"></div>
+                <div id="addStatus" class="status-message"></div>
+            </div>
+        </section>
+
+        <!-- Recommendations Tab -->
+        <section id="recommendations-tab" class="tab-content">
+            <div class="card">
+                <h2>🎯 Your Personalized Recommendations</h2>
+                <p>Based on your viewing history and preferences</p>
+                
+                <button id="generateBtn" class="btn-primary">Generate Recommendations</button>
+                
+                <div id="recommendationsStatus" class="status-message"></div>
+                <div id="recommendationsList" class="recommendations-grid"></div>
+            </div>
+        </section>
+
+        <!-- Collection Tab -->
+        <section id="collection-tab" class="tab-content">
+            <div class="card">
+                <h2>📚 My Movie Collection</h2>
+                <div id="collectionCount" class="collection-count"></div>
+                <div id="collectionList" class="collection-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Movie Detail Modal -->
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div id="movieDetails"></div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="loading-spinner">
+        <div class="spinner"></div>
+        <p>Processing...</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

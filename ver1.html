@@ -1,0 +1,481 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Movie Recommender</title>
+    <!-- Load Tailwind CSS for fast, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for a cleaner UI */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .card {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 0.25rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #4b5563; /* gray-600 */
+        }
+    </style>
+</head>
+<body class="p-6">
+
+    <div class="max-w-5xl mx-auto">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-extrabold text-blue-800">🎬 Dynamic JS Movie Recommender</h1>
+            <p class="text-gray-600 mt-2">Load your data via CSV or manually, then get personalized genre-based recommendations.</p>
+        </header>
+
+        <main class="space-y-10">
+            
+            <!-- Data Management Section -->
+            <section class="card bg-white p-6 rounded-lg">
+                <h2 class="text-2xl font-semibold text-gray-700 mb-4">1. Data Management</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Upload CSV Ratings -->
+                    <div class="p-4 border border-gray-200 rounded-lg">
+                        <h3 class="font-bold text-lg mb-2">Upload Your Ratings CSV</h3>
+                        <p class="text-sm text-gray-500 mb-3">File must contain `movie_id,rating` columns. This will override existing user ratings.</p>
+                        <input type="file" id="ratings-csv-file" accept=".csv" class="mb-3 text-sm">
+                        <button onclick="handleRatingsUpload()" class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition duration-150">
+                            Load Ratings File
+                        </button>
+                    </div>
+
+                    <!-- Add New Movie -->
+                    <div class="p-4 border border-gray-200 rounded-lg space-y-3">
+                        <h3 class="font-bold text-lg mb-2">Add New Movie to Catalog</h3>
+                        <div class="input-group">
+                            <label for="new-movie-title">Title</label>
+                            <input type="text" id="new-movie-title" placeholder="e.g., The Lunar Base" class="w-full p-2 border border-gray-300 rounded-md">
+                        </div>
+                        <div class="input-group">
+                            <label for="new-movie-genres">Genres (pipe | separated)</label>
+                            <input type="text" id="new-movie-genres" placeholder="e.g., Sci-Fi|Drama" class="w-full p-2 border border-gray-300 rounded-md">
+                        </div>
+                        <div class="input-group">
+                            <label for="new-movie-desc">Description</label>
+                            <input type="text" id="new-movie-desc" placeholder="A short plot summary..." class="w-full p-2 border border-gray-300 rounded-md">
+                        </div>
+                        <button onclick="addMovie()" class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition duration-150">
+                            Add Movie
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-4 border border-gray-200 rounded-lg">
+                    <h3 class="font-bold text-lg mb-2">Rate an Existing Movie</h3>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <select id="rating-movie-select" class="p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 flex-grow">
+                            <!-- Movie options filled by JS -->
+                        </select>
+                        <input type="number" id="new-rating-value" min="0.5" max="5.0" step="0.5" value="4.0" class="p-2 border border-gray-300 rounded-md w-24">
+                        <button onclick="addRating()" class="bg-yellow-500 text-white py-2 px-4 rounded-lg hover:bg-yellow-600 transition duration-150">
+                            Submit Rating
+                        </button>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="border-t border-gray-300">
+
+            <!-- Data Overview Section -->
+            <section class="card bg-white p-6 rounded-lg">
+                <h2 class="text-2xl font-semibold text-gray-700 mb-4">2. Your Current Data</h2>
+                <div id="rated-movies-list" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <p class="text-gray-500 italic">Loading rated movies...</p>
+                </div>
+            </section>
+
+            <!-- Personalized Recommendation Section -->
+            <section class="card bg-white p-6 rounded-lg">
+                <h2 class="text-2xl font-semibold text-gray-700 mb-4">3. Personalized Suggestions</h2>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-6 items-center">
+                    <label for="top-n-select" class="flex items-center text-gray-600">Base recommendations on your top:</label>
+                    <select id="top-n-select" class="p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 w-full sm:w-auto">
+                        <!-- Options filled by JS -->
+                    </select>
+                    <button onclick="generateRecommendations()" class="w-full sm:w-auto bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-150">
+                        Get Recommendations
+                    </button>
+                </div>
+                <div id="recommendation-results" class="mt-6 space-y-3">
+                    <!-- Results injected here -->
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <div id="message-box" class="fixed bottom-4 right-4 bg-gray-800 text-white p-3 rounded-lg shadow-xl hidden transition-opacity duration-300"></div>
+
+    <script>
+        // --- INITIAL DATA (Used as the starting point, stored separately) ---
+        const initial_MOVIE_DB = [
+            { id: 101, title: 'The Cosmic Nomad', genres: ['Sci-Fi', 'Adventure', 'Action'], description: 'A lone space traveler discovers an ancient map leading to the edge of the universe.' },
+            { id: 102, title: 'Echoes of the Past', genres: ['Drama', 'Romance'], description: 'Two estranged lovers meet again in a quiet European town.' },
+            { id: 103, title: 'Code Red Zero', genres: ['Action', 'Thriller'], description: 'An ex-agent must stop a global cyber-attack.' },
+            { id: 104, title: 'Whispering Woods', genres: ['Horror', 'Mystery'], description: 'A group of friends gets lost in a forest rumored to be haunted.' },
+            { id: 105, title: 'The Iron Chef', genres: ['Documentary'], description: 'A look into the demanding world of competitive high-end cooking.' },
+            { id: 106, title: 'A Starry Night\'s Dream', genres: ['Romance', 'Comedy'], description: 'A clumsy astronomer falls for a cynical lawyer who doesn\'t believe in destiny.' },
+            { id: 107, title: 'Deep Sea Leviathan', genres: ['Sci-Fi', 'Horror'], description: 'A deep-sea drilling crew unleashes an ancient, monstrous creature.' },
+            { id: 108, title: 'The Quantum Paradox', genres: ['Sci-Fi', 'Mystery'], description: 'A scientist invents a machine that lets him see parallel timelines.' },
+        ];
+        
+        const initial_USER_RATINGS = [
+            { movie_id: 101, rating: 5.0 },
+            { movie_id: 102, rating: 4.5 },
+            { movie_id: 103, rating: 1.0 },
+            { movie_id: 104, rating: 0.5 },
+            { movie_id: 106, rating: 4.0 },
+        ];
+
+        // --- MUTABLE GLOBAL STATE ---
+        let MOVIE_DB = initial_MOVIE_DB;
+        let USER_RATINGS = initial_USER_RATINGS;
+        let ratedMovies = [];
+        let allMovies = {};
+        let nextMovieId = 1000; // Starting ID for manually added movies
+
+        // --- Utility Functions ---
+
+        function showMessage(text, duration = 3000) {
+            const box = document.getElementById('message-box');
+            box.textContent = text;
+            box.classList.remove('hidden');
+            box.style.opacity = '1';
+            setTimeout(() => {
+                box.style.opacity = '0';
+                setTimeout(() => box.classList.add('hidden'), 300);
+            }, duration);
+        }
+
+        // --- Core Data Management ---
+
+        /**
+         * Merges the MOVIE_DB and USER_RATINGS into the working arrays (allMovies, ratedMovies).
+         * This must be called every time MOVIE_DB or USER_RATINGS is updated.
+         */
+        function initializeData() {
+            ratedMovies = [];
+            allMovies = {};
+            
+            // 1. Create lookup map and merge data
+            MOVIE_DB.forEach(movie => {
+                const ratingEntry = USER_RATINGS.find(r => r.movie_id === movie.id);
+                const rating = ratingEntry ? ratingEntry.rating : 0.0;
+
+                const fullMovie = {
+                    ...movie,
+                    rating: rating
+                };
+                allMovies[movie.id] = fullMovie;
+
+                if (rating > 0) {
+                    ratedMovies.push(fullMovie);
+                }
+            });
+
+            // 2. Sort rated movies by rating (highest first)
+            ratedMovies.sort((a, b) => b.rating - a.rating);
+            
+            // 3. Update UI elements
+            renderRatedMovies();
+            renderTopNOptions();
+            renderRatingMovieSelect();
+            
+            showMessage("Data synchronized and ready.");
+        }
+
+        // --- UI Rendering Functions ---
+
+        function renderRatedMovies() {
+            const container = document.getElementById('rated-movies-list');
+            container.innerHTML = ''; 
+
+            if (ratedMovies.length === 0) {
+                container.innerHTML = '<p class="text-gray-500 italic">No movies have been rated yet.</p>';
+                return;
+            }
+
+            ratedMovies.forEach(movie => {
+                const card = document.createElement('div');
+                card.className = 'p-3 bg-gray-100 rounded-lg border border-gray-200';
+                card.innerHTML = `
+                    <p class="font-bold text-lg">${movie.title}</p>
+                    <p class="text-sm text-yellow-600">Rating: ${movie.rating} / 5.0</p>
+                    <p class="text-xs text-gray-500 mt-1">${movie.genres.join(', ')}</p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function renderTopNOptions() {
+            const select = document.getElementById('top-n-select');
+            select.innerHTML = '';
+            
+            if (ratedMovies.length === 0) {
+                select.innerHTML = '<option value="0">0 Movies</option>';
+                return;
+            }
+            
+            for (let i = 1; i <= ratedMovies.length; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = i + (i === 1 ? ' Movie' : ' Movies');
+                if (i === Math.min(2, ratedMovies.length)) { 
+                    option.selected = true;
+                }
+                select.appendChild(option);
+            }
+        }
+        
+        function renderRatingMovieSelect() {
+            const select = document.getElementById('rating-movie-select');
+            select.innerHTML = '<option value="">-- Select a movie to rate --</option>';
+
+            // Sort movies by title for readability
+            const sortedMovies = MOVIE_DB.slice().sort((a, b) => a.title.localeCompare(b.title));
+
+            sortedMovies.forEach(movie => {
+                const option = document.createElement('option');
+                option.value = movie.id;
+                // Show current rating if available
+                const currentRating = allMovies[movie.id] ? allMovies[movie.id].rating : 0.0;
+                option.textContent = `${movie.title} (Current: ${currentRating.toFixed(1)})`;
+                select.appendChild(option);
+            });
+        }
+        
+        function renderResults(recommendations) {
+            const container = document.getElementById('recommendation-results');
+            container.innerHTML = '';
+
+            if (recommendations.length === 0) {
+                container.innerHTML = '<p class="text-red-500">No new suggestions found based on this selection or similarity scores were too low.</p>';
+                return;
+            }
+
+            recommendations.forEach((rec, index) => {
+                const movie = allMovies[rec.id];
+                const item = document.createElement('div');
+                item.className = 'p-4 bg-blue-50 border border-blue-200 rounded-lg flex space-x-4';
+                item.innerHTML = `
+                    <div class="text-blue-700 font-bold text-xl">${index + 1}.</div>
+                    <div>
+                        <p class="font-bold text-blue-800">${movie.title} <span class="text-sm text-gray-500 font-normal">(${movie.genres.join(', ')})</span></p>
+                        <p class="text-sm text-gray-700 mt-1">${movie.description}</p>
+                        <p class="text-xs text-green-700 mt-1">Similarity Score: ${(rec.score * 100).toFixed(1)}%</p>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // --- CSV Handler ---
+        
+        /**
+         * Parses a CSV string and returns an array of objects.
+         * Assumes the first row is the header.
+         * Only handles the simple movie_id,rating structure.
+         */
+        function parseRatingsCsv(csvText) {
+            const lines = csvText.split('\n').filter(line => line.trim() !== '');
+            if (lines.length === 0) return [];
+            
+            const headers = lines[0].toLowerCase().trim().split(',');
+            const data = [];
+
+            // Check for required headers
+            if (!headers.includes('movie_id') || !headers.includes('rating')) {
+                throw new Error("CSV must contain 'movie_id' and 'rating' columns.");
+            }
+
+            for (let i = 1; i < lines.length; i++) {
+                const values = lines[i].trim().split(',');
+                if (values.length === headers.length) {
+                    const obj = {};
+                    headers.forEach((header, index) => {
+                        obj[header] = values[index];
+                    });
+                    
+                    // Validate and convert types
+                    const movieId = parseInt(obj['movie_id']);
+                    const rating = parseFloat(obj['rating']);
+
+                    if (!isNaN(movieId) && !isNaN(rating) && rating >= 0.5 && rating <= 5.0) {
+                        data.push({ movie_id: movieId, rating: rating });
+                    }
+                }
+            }
+            return data;
+        }
+
+        function handleRatingsUpload() {
+            const fileInput = document.getElementById('ratings-csv-file');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                showMessage("Please select a CSV file.", 2000);
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const csvText = e.target.result;
+                    const newRatings = parseRatingsCsv(csvText);
+                    
+                    if (newRatings.length > 0) {
+                        // Replace existing ratings with new ones from the file
+                        USER_RATINGS = newRatings;
+                        initializeData();
+                        showMessage(`Successfully loaded ${newRatings.length} ratings!`, 4000);
+                    } else {
+                        throw new Error("Could not parse any valid ratings from the file.");
+                    }
+                } catch (error) {
+                    showMessage(`Error loading file: ${error.message}`, 5000);
+                    console.error("CSV Parsing Error:", error);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // --- Manual Addition Handlers ---
+
+        function addMovie() {
+            const title = document.getElementById('new-movie-title').value.trim();
+            const genresStr = document.getElementById('new-movie-genres').value.trim();
+            const description = document.getElementById('new-movie-desc').value.trim();
+
+            if (!title || !genresStr || !description) {
+                showMessage("Please fill in all movie fields.", 3000);
+                return;
+            }
+
+            const genres = genresStr.split('|').map(g => g.trim()).filter(g => g.length > 0);
+            if (genres.length === 0) {
+                showMessage("Please provide at least one genre separated by '|'.", 3000);
+                return;
+            }
+
+            const newMovie = {
+                id: nextMovieId++,
+                title: title,
+                genres: genres,
+                description: description
+            };
+
+            MOVIE_DB.push(newMovie);
+            // Optionally, add a default rating of 0.0 or 5.0 to encourage rating
+            // USER_RATINGS.push({ movie_id: newMovie.id, rating: 0.0 });
+            
+            initializeData();
+            showMessage(`Movie "${title}" added to catalog! Now you can rate it below.`, 4000);
+            
+            // Clear inputs
+            document.getElementById('new-movie-title').value = '';
+            document.getElementById('new-movie-genres').value = '';
+            document.getElementById('new-movie-desc').value = '';
+        }
+
+        function addRating() {
+            const movieId = parseInt(document.getElementById('rating-movie-select').value);
+            const ratingValue = parseFloat(document.getElementById('new-rating-value').value);
+            
+            if (isNaN(movieId)) {
+                showMessage("Please select a movie to rate.", 3000);
+                return;
+            }
+            
+            if (isNaN(ratingValue) || ratingValue < 0.5 || ratingValue > 5.0) {
+                showMessage("Rating must be between 0.5 and 5.0.", 3000);
+                return;
+            }
+
+            const existingIndex = USER_RATINGS.findIndex(r => r.movie_id === movieId);
+            const movieTitle = allMovies[movieId] ? allMovies[movieId].title : 'Unknown Movie';
+
+            if (existingIndex !== -1) {
+                USER_RATINGS[existingIndex].rating = ratingValue;
+                showMessage(`Rating for "${movieTitle}" updated to ${ratingValue}!`, 3000);
+            } else {
+                USER_RATINGS.push({ movie_id: movieId, rating: ratingValue });
+                showMessage(`Rating of ${ratingValue} added for "${movieTitle}"!`, 3000);
+            }
+            
+            initializeData();
+        }
+
+
+        // --- Recommendation Logic (Simplified JS Equivalent of Python ML) ---
+
+        /**
+         * Calculates a simple similarity score based on the number of shared genres.
+         */
+        function calculateSimilarity(movieA, movieB) {
+            const genresA = new Set(movieA.genres);
+            let matchCount = 0;
+            
+            movieB.genres.forEach(genre => {
+                if (genresA.has(genre)) {
+                    matchCount++;
+                }
+            });
+            
+            const maxGenres = Math.max(genresA.size, movieB.genres.length);
+            return maxGenres > 0 ? matchCount / maxGenres : 0;
+        }
+
+        /**
+         * Main function to trigger recommendations based on user's top N rated movies.
+         */
+        function generateRecommendations() {
+            if (ratedMovies.length === 0) {
+                 document.getElementById('recommendation-results').innerHTML = '<p class="text-red-500">Please rate at least one movie first!</p>';
+                 return;
+            }
+
+            const topN = parseInt(document.getElementById('top-n-select').value);
+            const topLikedMovies = ratedMovies.slice(0, topN);
+            
+            let recommendationScores = {}; 
+            const alreadyRatedIds = new Set(ratedMovies.map(m => m.id));
+
+            // 1. Calculate similarity for all unrated movies against top liked movies
+            topLikedMovies.forEach(likedMovie => {
+                for (const id in allMovies) {
+                    const currentMovie = allMovies[id];
+                    
+                    // Skip movies the user has already rated
+                    if (alreadyRatedIds.has(currentMovie.id)) continue;
+                    
+                    const score = calculateSimilarity(likedMovie, currentMovie);
+                    
+                    // Accumulate scores (the new score is the highest similarity found)
+                    if (score > (recommendationScores[id] ? recommendationScores[id].score : 0)) {
+                        recommendationScores[id] = { id: currentMovie.id, score: score };
+                    }
+                }
+            });
+
+            // 2. Convert map to array, sort, and display top 5
+            const finalRecommendations = Object.values(recommendationScores)
+                .sort((a, b) => b.score - a.score)
+                .slice(0, 5); 
+
+            renderResults(finalRecommendations);
+        }
+
+        // Initialize the UI on page load
+        window.onload = initializeData;
+
+    </script>
+</body>
+</html>

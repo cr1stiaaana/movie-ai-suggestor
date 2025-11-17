@@ -1,0 +1,449 @@
+2025-11-17 23:48:33,789 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-17 23:48:33,789 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-11-17 23:48:33,792 - werkzeug - INFO -  * Restarting with stat
+2025-11-17 23:48:34,324 - werkzeug - WARNING -  * Debugger is active!
+2025-11-17 23:48:34,328 - werkzeug - INFO -  * Debugger PIN: 520-798-166
+2025-11-18 00:03:13,936 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:03:13] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:03:14,199 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:03:14] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:09:45,445 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-18 00:09:45,451 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-11-18 00:09:45,452 - werkzeug - INFO -  * Restarting with stat
+2025-11-18 00:09:45,956 - werkzeug - WARNING -  * Debugger is active!
+2025-11-18 00:09:45,960 - werkzeug - INFO -  * Debugger PIN: 520-798-166
+2025-11-18 00:09:46,470 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:09:46] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:09:46,734 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:09:46] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:09:47,103 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:09:47] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:12:59,887 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:12:59] "[31m[1mPOST /api/upload-csv HTTP/1.1[0m" 400 -
+2025-11-18 00:13:14,215 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:13:14] "[31m[1mPOST /api/upload-csv HTTP/1.1[0m" 400 -
+2025-11-18 00:13:20,794 - csv_importer - INFO - Detected CSV format: letterboxd
+2025-11-18 00:13:39,420 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:13:39] "POST /api/upload-csv HTTP/1.1" 200 -
+2025-11-18 00:13:52,696 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:13:52] "[31m[1mPOST /api/upload-csv HTTP/1.1[0m" 400 -
+2025-11-18 00:14:11,766 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:14:11] "[31m[1mPOST /api/upload-csv HTTP/1.1[0m" 400 -
+2025-11-18 00:14:39,143 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:14:39] "[31m[1mPOST /api/upload-csv HTTP/1.1[0m" 400 -
+2025-11-18 00:14:52,967 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:14:52] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:14:53,903 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:14:53] "POST /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:15:01,041 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:15:01] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:15:01,347 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:15:01] "[31m[1mPOST /api/add-movie HTTP/1.1[0m" 400 -
+2025-11-18 00:15:03,013 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:15:03] "[31m[1mPOST /api/add-movie HTTP/1.1[0m" 400 -
+2025-11-18 00:15:08,430 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:15:08] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:15:08,697 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:15:08] "[31m[1mPOST /api/add-movie HTTP/1.1[0m" 400 -
+2025-11-18 00:15:12,573 - tmdb_client - INFO - Cache hit for search/movie
+2025-11-18 00:15:12,573 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:15:12] "POST /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:15:28,050 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:15:28] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:15:28,305 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:15:28] "[31m[1mPOST /api/add-movie HTTP/1.1[0m" 400 -
+2025-11-18 00:15:31,589 - tmdb_client - INFO - Cache hit for search/movie
+2025-11-18 00:15:31,590 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:15:31] "POST /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:15:35,726 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:15:35] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:15:36,658 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:15:36] "POST /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:15:40,738 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:15:40] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:15:41,045 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:15:41] "[31m[1mPOST /api/add-movie HTTP/1.1[0m" 400 -
+2025-11-18 00:15:48,113 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:15:48] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:16:01,194 - recommendation_engine - INFO - Generating recommendations for 37 movies
+2025-11-18 00:16:01,202 - recommendation_engine - INFO - User profile: {'genre_preferences': {'Drama': 0.20833333333333334, 'Romance': 0.21875, 'Fantasy': 0.07291666666666667, 'Music': 0.020833333333333332, 'Crime': 0.020833333333333332, 'Thriller': 0.07291666666666667, 'Science Fiction': 0.0625, 'Action': 0.0625, 'Adventure': 0.11458333333333333, 'Documentary': 0.010416666666666666, 'Comedy': 0.09375, 'Mystery': 0.020833333333333332, 'Animation': 0.010416666666666666, 'Horror': 0.010416666666666666}, 'avg_rating': np.float64(8.054054054054054), 'rating_std': np.float64(1.523614939400584), 'decade_preferences': Counter({2020: 24, 2010: 9, 2000: 4}), 'viewing_frequency': 1, 'highly_rated_count': 37}
+2025-11-18 00:16:36,795 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:16:36] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:16:37,470 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:16:37] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:16:38,524 - recommendation_engine - INFO - Found 986 candidate movies
+2025-11-18 00:16:40,173 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:16:40] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:16:52,315 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:16:52] "GET /api/recommendations HTTP/1.1" 200 -
+2025-11-18 00:17:14,359 - recommendation_engine - INFO - Generating recommendations for 37 movies
+2025-11-18 00:17:14,359 - recommendation_engine - INFO - User profile: {'genre_preferences': {'Drama': 0.20833333333333334, 'Romance': 0.21875, 'Fantasy': 0.07291666666666667, 'Music': 0.020833333333333332, 'Crime': 0.020833333333333332, 'Thriller': 0.07291666666666667, 'Science Fiction': 0.0625, 'Action': 0.0625, 'Adventure': 0.11458333333333333, 'Documentary': 0.010416666666666666, 'Comedy': 0.09375, 'Mystery': 0.020833333333333332, 'Animation': 0.010416666666666666, 'Horror': 0.010416666666666666}, 'avg_rating': np.float64(8.054054054054054), 'rating_std': np.float64(1.523614939400584), 'decade_preferences': Counter({2020: 24, 2010: 9, 2000: 4}), 'viewing_frequency': 1, 'highly_rated_count': 37}
+2025-11-18 00:17:14,359 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,359 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,359 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,359 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,359 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,359 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,359 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,359 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,360 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,360 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,360 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,360 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,360 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,360 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,360 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,360 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,360 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,360 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,360 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,360 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,360 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,360 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,361 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,361 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,361 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,361 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,361 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,361 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,361 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,361 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,361 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,361 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,361 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,361 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,361 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,361 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,361 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,361 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,362 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,362 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,362 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,362 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,362 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,362 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,362 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,362 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,362 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,362 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,362 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,362 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:17:14,363 - recommendation_engine - INFO - Found 986 candidate movies
+2025-11-18 00:17:14,391 - tmdb_client - INFO - Cache hit for movie/1062722
+2025-11-18 00:17:14,391 - tmdb_client - INFO - Cache hit for movie/1062722/credits
+2025-11-18 00:17:14,391 - tmdb_client - INFO - Cache hit for movie/1054867
+2025-11-18 00:17:14,391 - tmdb_client - INFO - Cache hit for movie/1054867/credits
+2025-11-18 00:17:14,391 - tmdb_client - INFO - Cache hit for movie/1248226
+2025-11-18 00:17:14,391 - tmdb_client - INFO - Cache hit for movie/1248226/credits
+2025-11-18 00:17:14,391 - tmdb_client - INFO - Cache hit for movie/1242898
+2025-11-18 00:17:14,391 - tmdb_client - INFO - Cache hit for movie/1242898/credits
+2025-11-18 00:17:14,391 - tmdb_client - INFO - Cache hit for movie/1301844
+2025-11-18 00:17:14,391 - tmdb_client - INFO - Cache hit for movie/1301844/credits
+2025-11-18 00:17:14,391 - tmdb_client - INFO - Cache hit for movie/1128650
+2025-11-18 00:17:14,391 - tmdb_client - INFO - Cache hit for movie/1128650/credits
+2025-11-18 00:17:14,392 - tmdb_client - INFO - Cache hit for movie/1429738
+2025-11-18 00:17:14,392 - tmdb_client - INFO - Cache hit for movie/1429738/credits
+2025-11-18 00:17:14,392 - tmdb_client - INFO - Cache hit for movie/1549512
+2025-11-18 00:17:14,392 - tmdb_client - INFO - Cache hit for movie/1549512/credits
+2025-11-18 00:17:14,392 - tmdb_client - INFO - Cache hit for movie/296096
+2025-11-18 00:17:14,392 - tmdb_client - INFO - Cache hit for movie/296096/credits
+2025-11-18 00:17:14,392 - tmdb_client - INFO - Cache hit for movie/1232449
+2025-11-18 00:17:14,392 - tmdb_client - INFO - Cache hit for movie/1232449/credits
+2025-11-18 00:17:14,392 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:17:14] "GET /api/recommendations HTTP/1.1" 200 -
+2025-11-18 00:17:27,742 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:17:27] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:17:34,059 - tmdb_client - INFO - Cache hit for movie/803796
+2025-11-18 00:17:34,059 - tmdb_client - INFO - Cache hit for movie/803796/credits
+2025-11-18 00:17:34,060 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:17:34] "GET /api/movie/803796 HTTP/1.1" 200 -
+2025-11-18 00:17:50,664 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:17:50] "[31m[1mPOST /api/upload-csv HTTP/1.1[0m" 400 -
+2025-11-18 00:17:52,444 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:17:52] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:17:54,939 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:17:54] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:17:56,434 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:17:56] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:18:05,402 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:18:05] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:18:14,662 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:18:14] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:18:15,594 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:18:15] "POST /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:18:23,341 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:18:23] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:18:23,644 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:18:23] "[31m[1mPOST /api/add-movie HTTP/1.1[0m" 400 -
+2025-11-18 00:18:25,066 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:18:25] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:18:30,283 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:18:30] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:18:30,537 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:18:30] "[31m[1mPOST /api/add-movie HTTP/1.1[0m" 400 -
+2025-11-18 00:18:33,952 - tmdb_client - INFO - Cache hit for search/movie
+2025-11-18 00:18:33,952 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:18:33] "POST /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:18:44,783 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:18:44] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:18:45,051 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:18:45] "[31m[1mPOST /api/add-movie HTTP/1.1[0m" 400 -
+2025-11-18 00:18:51,275 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:18:51] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:18:51,583 - tmdb_client - INFO - Cache hit for search/movie
+2025-11-18 00:18:51,583 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:18:51] "POST /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:20:34,318 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:20:34] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:20:35,877 - recommendation_engine - INFO - Generating recommendations for 37 movies
+2025-11-18 00:20:35,878 - recommendation_engine - INFO - User profile: {'genre_preferences': {'Drama': 0.20833333333333334, 'Romance': 0.21875, 'Fantasy': 0.07291666666666667, 'Music': 0.020833333333333332, 'Crime': 0.020833333333333332, 'Thriller': 0.07291666666666667, 'Science Fiction': 0.0625, 'Action': 0.0625, 'Adventure': 0.11458333333333333, 'Documentary': 0.010416666666666666, 'Comedy': 0.09375, 'Mystery': 0.020833333333333332, 'Animation': 0.010416666666666666, 'Horror': 0.010416666666666666}, 'avg_rating': np.float64(8.054054054054054), 'rating_std': np.float64(1.523614939400584), 'decade_preferences': Counter({2020: 24, 2010: 9, 2000: 4}), 'viewing_frequency': 1, 'highly_rated_count': 37}
+2025-11-18 00:20:35,878 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,878 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,878 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,878 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,878 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,878 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,878 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,878 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,879 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,879 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,879 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,879 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,879 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,879 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,879 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,879 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,879 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,879 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,879 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,879 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,880 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,880 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,880 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,880 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,880 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,880 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,880 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,880 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,880 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,880 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,880 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,880 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,880 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,881 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,881 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,881 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,881 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,881 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,881 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,881 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,881 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,881 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,881 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,881 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,881 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,881 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,882 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,882 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,882 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,882 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:20:35,882 - recommendation_engine - INFO - Found 986 candidate movies
+2025-11-18 00:20:35,912 - tmdb_client - INFO - Cache hit for movie/1062722
+2025-11-18 00:20:35,912 - tmdb_client - INFO - Cache hit for movie/1062722/credits
+2025-11-18 00:20:35,913 - tmdb_client - INFO - Cache hit for movie/1054867
+2025-11-18 00:20:35,913 - tmdb_client - INFO - Cache hit for movie/1054867/credits
+2025-11-18 00:20:35,913 - tmdb_client - INFO - Cache hit for movie/1248226
+2025-11-18 00:20:35,913 - tmdb_client - INFO - Cache hit for movie/1248226/credits
+2025-11-18 00:20:35,913 - tmdb_client - INFO - Cache hit for movie/1242898
+2025-11-18 00:20:35,913 - tmdb_client - INFO - Cache hit for movie/1242898/credits
+2025-11-18 00:20:35,913 - tmdb_client - INFO - Cache hit for movie/1301844
+2025-11-18 00:20:35,913 - tmdb_client - INFO - Cache hit for movie/1301844/credits
+2025-11-18 00:20:35,913 - tmdb_client - INFO - Cache hit for movie/1128650
+2025-11-18 00:20:35,913 - tmdb_client - INFO - Cache hit for movie/1128650/credits
+2025-11-18 00:20:35,913 - tmdb_client - INFO - Cache hit for movie/1429738
+2025-11-18 00:20:35,913 - tmdb_client - INFO - Cache hit for movie/1429738/credits
+2025-11-18 00:20:35,913 - tmdb_client - INFO - Cache hit for movie/1549512
+2025-11-18 00:20:35,913 - tmdb_client - INFO - Cache hit for movie/1549512/credits
+2025-11-18 00:20:35,913 - tmdb_client - INFO - Cache hit for movie/296096
+2025-11-18 00:20:35,913 - tmdb_client - INFO - Cache hit for movie/296096/credits
+2025-11-18 00:20:35,913 - tmdb_client - INFO - Cache hit for movie/1232449
+2025-11-18 00:20:35,913 - tmdb_client - INFO - Cache hit for movie/1232449/credits
+2025-11-18 00:20:35,914 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:20:35] "GET /api/recommendations HTTP/1.1" 200 -
+2025-11-18 00:20:45,406 - tmdb_client - INFO - Cache hit for movie/1301844
+2025-11-18 00:20:45,406 - tmdb_client - INFO - Cache hit for movie/1301844/credits
+2025-11-18 00:20:45,408 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:20:45] "GET /api/movie/1301844 HTTP/1.1" 200 -
+2025-11-18 00:20:48,889 - werkzeug - INFO -  * Detected change in 'E:\\0 - ETTI\\AN 4\\IA\\proiect-ia\\dev-app\\app.py', reloading
+2025-11-18 00:20:48,971 - werkzeug - INFO -  * Restarting with stat
+2025-11-18 00:20:49,846 - werkzeug - WARNING -  * Debugger is active!
+2025-11-18 00:20:49,850 - werkzeug - INFO -  * Debugger PIN: 520-798-166
+2025-11-18 00:20:49,861 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:20:49] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:20:52,833 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:20:52] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:21:00,551 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:21:00] "[31m[1mPOST /api/upload-csv HTTP/1.1[0m" 400 -
+2025-11-18 00:21:18,585 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-18 00:21:18,585 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-11-18 00:21:18,586 - werkzeug - INFO -  * Restarting with stat
+2025-11-18 00:21:19,083 - werkzeug - WARNING -  * Debugger is active!
+2025-11-18 00:21:19,086 - werkzeug - INFO -  * Debugger PIN: 520-798-166
+2025-11-18 00:21:31,218 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:21:31] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:21:32,488 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:21:32] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:21:36,896 - csv_importer - INFO - Detected CSV format: letterboxd
+2025-11-18 00:21:54,852 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:21:54] "POST /api/upload-csv HTTP/1.1" 200 -
+2025-11-18 00:21:57,254 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:21:57] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:22:00,791 - recommendation_engine - INFO - Generating recommendations for 37 movies
+2025-11-18 00:22:00,791 - recommendation_engine - INFO - User profile: {'genre_preferences': {'Drama': 0.20833333333333334, 'Romance': 0.21875, 'Fantasy': 0.07291666666666667, 'Crime': 0.020833333333333332, 'Thriller': 0.07291666666666667, 'Comedy': 0.09375, 'Documentary': 0.010416666666666666, 'Action': 0.0625, 'Adventure': 0.11458333333333333, 'Science Fiction': 0.0625, 'Music': 0.020833333333333332, 'Mystery': 0.020833333333333332, 'Horror': 0.010416666666666666, 'Animation': 0.010416666666666666}, 'avg_rating': np.float64(8.054054054054054), 'rating_std': np.float64(1.523614939400584), 'decade_preferences': Counter({2020: 24, 2010: 9, 2000: 4}), 'viewing_frequency': 1, 'highly_rated_count': 37}
+2025-11-18 00:22:30,208 - recommendation_engine - INFO - Found 986 candidate movies
+2025-11-18 00:22:43,258 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:22:43] "GET /api/recommendations HTTP/1.1" 200 -
+2025-11-18 00:22:52,097 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:22:52] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:22:52,405 - __main__ - INFO - Received data: {'title': 'winter soldier'}
+2025-11-18 00:22:52,964 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:22:52] "POST /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:23:01,873 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:23:01] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:23:02,182 - __main__ - INFO - Received data: {'tmdb_id': 100402, 'rating': 9, 'watch_date': None}
+2025-11-18 00:23:02,182 - __main__ - ERROR - Invalid data received: {'tmdb_id': 100402, 'rating': 9, 'watch_date': None}
+2025-11-18 00:23:02,182 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:23:02] "[31m[1mPOST /api/add-movie HTTP/1.1[0m" 400 -
+2025-11-18 00:23:04,460 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:23:04] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:23:54,967 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:23:54] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:23:55,232 - __main__ - INFO - Received data: {'title': 'winter soldier'}
+2025-11-18 00:23:55,232 - tmdb_client - INFO - Cache hit for search/movie
+2025-11-18 00:23:55,232 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:23:55] "POST /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:24:02,977 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:24:02] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:24:03,292 - __main__ - INFO - Received data: {'tmdb_id': 100402, 'rating': 9, 'watch_date': None}
+2025-11-18 00:24:03,292 - __main__ - ERROR - Invalid data received: {'tmdb_id': 100402, 'rating': 9, 'watch_date': None}
+2025-11-18 00:24:03,292 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:24:03] "[31m[1mPOST /api/add-movie HTTP/1.1[0m" 400 -
+2025-11-18 00:24:26,581 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:24:26] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:24:26,892 - __main__ - INFO - Received data: {'tmdb_id': 100402, 'rating': 9, 'watch_date': None}
+2025-11-18 00:24:26,892 - __main__ - ERROR - Invalid data received: {'tmdb_id': 100402, 'rating': 9, 'watch_date': None}
+2025-11-18 00:24:26,893 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:24:26] "[31m[1mPOST /api/add-movie HTTP/1.1[0m" 400 -
+2025-11-18 00:30:51,338 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:30:51] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:30:51,605 - __main__ - INFO - Received data: {'tmdb_id': 100402, 'rating': 9, 'watch_date': None}
+2025-11-18 00:30:51,605 - __main__ - ERROR - Invalid data received: {'tmdb_id': 100402, 'rating': 9, 'watch_date': None}
+2025-11-18 00:30:51,605 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:30:51] "[31m[1mPOST /api/add-movie HTTP/1.1[0m" 400 -
+2025-11-18 00:30:53,412 - __main__ - INFO - Received data: {'title': 'winter soldier'}
+2025-11-18 00:30:53,412 - tmdb_client - INFO - Cache hit for search/movie
+2025-11-18 00:30:53,413 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:30:53] "POST /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:31:01,815 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:31:01] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:31:02,081 - __main__ - INFO - Received data: {'tmdb_id': 100402, 'rating': 9, 'watch_date': None}
+2025-11-18 00:31:02,081 - __main__ - ERROR - Invalid data received: {'tmdb_id': 100402, 'rating': 9, 'watch_date': None}
+2025-11-18 00:31:02,081 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:31:02] "[31m[1mPOST /api/add-movie HTTP/1.1[0m" 400 -
+2025-11-18 00:31:33,284 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:31:33] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:31:33,598 - __main__ - INFO - Received data: {'tmdb_id': 100402, 'rating': 9, 'watch_date': None}
+2025-11-18 00:31:33,598 - __main__ - ERROR - Invalid data received: {'tmdb_id': 100402, 'rating': 9, 'watch_date': None}
+2025-11-18 00:31:33,598 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:31:33] "[31m[1mPOST /api/add-movie HTTP/1.1[0m" 400 -
+2025-11-18 00:31:36,965 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:31:36] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:31:43,274 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:31:43] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:31:46,222 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:31:46] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:31:46,527 - __main__ - INFO - Received data: {'title': 'winter soldier'}
+2025-11-18 00:31:46,527 - tmdb_client - INFO - Cache hit for search/movie
+2025-11-18 00:31:46,528 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:31:46] "POST /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:31:53,136 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:31:53] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:31:53,441 - __main__ - INFO - Received data: {'tmdb_id': 100402, 'rating': 9, 'watch_date': None}
+2025-11-18 00:31:53,441 - __main__ - ERROR - Invalid data received: {'tmdb_id': 100402, 'rating': 9, 'watch_date': None}
+2025-11-18 00:31:53,441 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:31:53] "[31m[1mPOST /api/add-movie HTTP/1.1[0m" 400 -
+2025-11-18 00:31:59,933 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:31:59] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:32:00,238 - __main__ - INFO - Received data: {'title': 'winter soldier'}
+2025-11-18 00:32:00,238 - tmdb_client - INFO - Cache hit for search/movie
+2025-11-18 00:32:00,238 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:32:00] "POST /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:32:09,196 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:32:09] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:32:09,503 - __main__ - INFO - Received data: {'title': 'Captain America'}
+2025-11-18 00:32:10,212 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:32:10] "POST /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:32:20,877 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:32:20] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:32:21,186 - __main__ - INFO - Received data: {'tmdb_id': 271110, 'rating': 8, 'watch_date': None}
+2025-11-18 00:32:21,186 - __main__ - ERROR - Invalid data received: {'tmdb_id': 271110, 'rating': 8, 'watch_date': None}
+2025-11-18 00:32:21,187 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:32:21] "[31m[1mPOST /api/add-movie HTTP/1.1[0m" 400 -
+2025-11-18 00:32:45,974 - werkzeug - INFO -  * Detected change in 'E:\\0 - ETTI\\AN 4\\IA\\proiect-ia\\dev-app\\app.py', reloading
+2025-11-18 00:32:46,040 - werkzeug - INFO -  * Restarting with stat
+2025-11-18 00:32:46,914 - werkzeug - WARNING -  * Debugger is active!
+2025-11-18 00:32:46,918 - werkzeug - INFO -  * Debugger PIN: 520-798-166
+2025-11-18 00:32:46,930 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:32:46] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:32:47,027 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:32:47] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:32:57,968 - werkzeug - INFO -  * Detected change in 'E:\\0 - ETTI\\AN 4\\IA\\proiect-ia\\dev-app\\app.py', reloading
+2025-11-18 00:32:58,116 - werkzeug - INFO -  * Restarting with stat
+2025-11-18 00:32:58,703 - werkzeug - WARNING -  * Debugger is active!
+2025-11-18 00:32:58,709 - werkzeug - INFO -  * Debugger PIN: 520-798-166
+2025-11-18 00:32:58,719 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:32:58] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:32:58,721 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:32:58] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:32:59,242 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:32:59] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:33:12,553 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:33:12] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:33:13,564 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:33:13] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:33:18,046 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:33:18] "OPTIONS /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:33:18,357 - __main__ - INFO - Received data: {'title': 'winter soldier'}
+2025-11-18 00:33:19,036 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:33:19] "POST /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:33:19,213 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-18 00:33:19,213 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-11-18 00:33:19,214 - werkzeug - INFO -  * Restarting with stat
+2025-11-18 00:33:19,755 - werkzeug - WARNING -  * Debugger is active!
+2025-11-18 00:33:19,759 - werkzeug - INFO -  * Debugger PIN: 520-798-166
+2025-11-18 00:33:22,947 - __main__ - INFO - Received data: {'tmdb_id': 100402, 'rating': 8, 'watch_date': None}
+2025-11-18 00:33:24,346 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:33:24] "POST /api/add-movie HTTP/1.1" 200 -
+2025-11-18 00:33:26,204 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:33:26] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:33:31,206 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:33:31] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:33:41,245 - csv_importer - INFO - Detected CSV format: letterboxd
+2025-11-18 00:33:58,307 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:33:58] "POST /api/upload-csv HTTP/1.1" 200 -
+2025-11-18 00:34:01,838 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:34:01] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:34:05,722 - recommendation_engine - INFO - Generating recommendations for 38 movies
+2025-11-18 00:34:05,723 - recommendation_engine - INFO - User profile: {'genre_preferences': {'Action': 0.0707070707070707, 'Adventure': 0.12121212121212122, 'Science Fiction': 0.0707070707070707, 'Documentary': 0.010101010101010102, 'Comedy': 0.09090909090909091, 'Drama': 0.20202020202020202, 'Romance': 0.21212121212121213, 'Music': 0.020202020202020204, 'Fantasy': 0.0707070707070707, 'Crime': 0.020202020202020204, 'Thriller': 0.0707070707070707, 'Animation': 0.010101010101010102, 'Mystery': 0.020202020202020204, 'Horror': 0.010101010101010102}, 'avg_rating': np.float64(8.052631578947368), 'rating_std': np.float64(1.5034586165353367), 'decade_preferences': Counter({2020: 24, 2010: 10, 2000: 4}), 'viewing_frequency': 1, 'highly_rated_count': 38}
+2025-11-18 00:34:33,090 - recommendation_engine - INFO - Found 987 candidate movies
+2025-11-18 00:34:44,280 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:34:44] "GET /api/recommendations HTTP/1.1" 200 -
+2025-11-18 00:34:52,157 - tmdb_client - INFO - Cache hit for movie/1062722
+2025-11-18 00:34:52,157 - tmdb_client - INFO - Cache hit for movie/1062722/credits
+2025-11-18 00:34:52,158 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:34:52] "GET /api/movie/1062722 HTTP/1.1" 200 -
+2025-11-18 00:34:58,136 - tmdb_client - INFO - Cache hit for movie/1054867
+2025-11-18 00:34:58,136 - tmdb_client - INFO - Cache hit for movie/1054867/credits
+2025-11-18 00:34:58,136 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:34:58] "GET /api/movie/1054867 HTTP/1.1" 200 -
+2025-11-18 00:35:02,004 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:35:02] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:35:03,505 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:35:03] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:35:05,949 - tmdb_client - INFO - Cache hit for movie/100402
+2025-11-18 00:35:05,949 - tmdb_client - INFO - Cache hit for movie/100402/credits
+2025-11-18 00:35:05,949 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:35:05] "GET /api/movie/100402 HTTP/1.1" 200 -
+2025-11-18 00:35:09,702 - tmdb_client - INFO - Cache hit for movie/100402
+2025-11-18 00:35:09,702 - tmdb_client - INFO - Cache hit for movie/100402/credits
+2025-11-18 00:35:09,702 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:35:09] "GET /api/movie/100402 HTTP/1.1" 200 -
+2025-11-18 00:35:22,408 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:35:22] "[31m[1mPOST /api/upload-csv HTTP/1.1[0m" 400 -
+2025-11-18 00:35:34,281 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:35:34] "[31m[1mPOST /api/upload-csv HTTP/1.1[0m" 400 -
+2025-11-18 00:35:45,045 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:35:45] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:35:49,440 - recommendation_engine - INFO - Generating recommendations for 38 movies
+2025-11-18 00:35:49,440 - recommendation_engine - INFO - User profile: {'genre_preferences': {'Action': 0.0707070707070707, 'Adventure': 0.12121212121212122, 'Science Fiction': 0.0707070707070707, 'Documentary': 0.010101010101010102, 'Comedy': 0.09090909090909091, 'Drama': 0.20202020202020202, 'Romance': 0.21212121212121213, 'Music': 0.020202020202020204, 'Fantasy': 0.0707070707070707, 'Crime': 0.020202020202020204, 'Thriller': 0.0707070707070707, 'Animation': 0.010101010101010102, 'Mystery': 0.020202020202020204, 'Horror': 0.010101010101010102}, 'avg_rating': np.float64(8.052631578947368), 'rating_std': np.float64(1.5034586165353367), 'decade_preferences': Counter({2020: 24, 2010: 10, 2000: 4}), 'viewing_frequency': 1, 'highly_rated_count': 38}
+2025-11-18 00:35:49,440 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,440 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,441 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,441 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,441 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,441 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,441 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,441 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,441 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,441 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,441 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,441 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,441 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,441 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,441 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,442 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,442 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,442 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,442 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,442 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,442 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,442 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,442 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,442 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,442 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,442 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,442 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,442 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,442 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,443 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,443 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,443 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,443 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,443 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,443 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,443 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,443 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,443 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,443 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,443 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,443 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,443 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,444 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,444 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,444 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,444 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,444 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,444 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,444 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,444 - tmdb_client - INFO - Cache hit for movie/popular
+2025-11-18 00:35:49,444 - recommendation_engine - INFO - Found 987 candidate movies
+2025-11-18 00:35:49,473 - tmdb_client - INFO - Cache hit for movie/1062722
+2025-11-18 00:35:49,474 - tmdb_client - INFO - Cache hit for movie/1062722/credits
+2025-11-18 00:35:49,474 - tmdb_client - INFO - Cache hit for movie/1054867
+2025-11-18 00:35:49,474 - tmdb_client - INFO - Cache hit for movie/1054867/credits
+2025-11-18 00:35:49,474 - tmdb_client - INFO - Cache hit for movie/1248226
+2025-11-18 00:35:49,474 - tmdb_client - INFO - Cache hit for movie/1248226/credits
+2025-11-18 00:35:49,474 - tmdb_client - INFO - Cache hit for movie/96988
+2025-11-18 00:35:49,474 - tmdb_client - INFO - Cache hit for movie/96988/credits
+2025-11-18 00:35:49,474 - tmdb_client - INFO - Cache hit for movie/1242898
+2025-11-18 00:35:49,474 - tmdb_client - INFO - Cache hit for movie/1242898/credits
+2025-11-18 00:35:49,474 - tmdb_client - INFO - Cache hit for movie/1128650
+2025-11-18 00:35:49,474 - tmdb_client - INFO - Cache hit for movie/1128650/credits
+2025-11-18 00:35:49,474 - tmdb_client - INFO - Cache hit for movie/1301844
+2025-11-18 00:35:49,474 - tmdb_client - INFO - Cache hit for movie/1301844/credits
+2025-11-18 00:35:49,474 - tmdb_client - INFO - Cache hit for movie/1429738
+2025-11-18 00:35:49,474 - tmdb_client - INFO - Cache hit for movie/1429738/credits
+2025-11-18 00:35:49,474 - tmdb_client - INFO - Cache hit for movie/1549512
+2025-11-18 00:35:49,474 - tmdb_client - INFO - Cache hit for movie/1549512/credits
+2025-11-18 00:35:49,474 - tmdb_client - INFO - Cache hit for movie/296096
+2025-11-18 00:35:49,474 - tmdb_client - INFO - Cache hit for movie/296096/credits
+2025-11-18 00:35:49,475 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:35:49] "GET /api/recommendations HTTP/1.1" 200 -
+2025-11-18 00:35:58,646 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:35:58] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:35:59,289 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:35:59] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:36:09,638 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:36:09] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:36:10,390 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:36:10] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:39:50,225 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:39:50] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:40:06,479 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:40:06] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:40:07,111 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:40:07] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:40:37,724 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:40:37] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:40:38,271 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:40:38] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:40:38,521 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:40:38] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:40:38,878 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:40:38] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:40:39,586 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:40:39] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:40:54,363 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:40:54] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:40:55,013 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:40:55] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:43:11,308 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:43:11] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:43:18,620 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:43:18] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:43:19,381 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:43:19] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:43:47,270 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:43:47] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:43:47,774 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:43:47] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:44:11,331 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:44:11] "GET /api/movies HTTP/1.1" 200 -
+2025-11-18 00:44:11,987 - werkzeug - INFO - 127.0.0.1 - - [18/Nov/2025 00:44:11] "GET /api/movies HTTP/1.1" 200 -
